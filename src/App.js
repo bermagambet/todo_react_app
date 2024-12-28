@@ -18,6 +18,7 @@ import { useHotkeys, useLocalStorage } from "@mantine/hooks";
 export default function App() {
   const [tasks, setTasks] = useState([]);
   const [opened, setOpened] = useState(false);
+  // const [state, setState] = useState("Done")
 
   const [colorScheme, setColorScheme] = useLocalStorage({
     key: "mantine-color-scheme",
@@ -31,23 +32,25 @@ export default function App() {
 
   const taskTitle = useRef("");
   const taskSummary = useRef("");
-
+  
+  //task1
   function createTask() {
-    tasks.push({
+    let newTask = {
       title: taskTitle.current.value,
       summary: taskSummary.current.value,
-    });
-    setTasks(tasks);
-    saveTasks(tasks);
+    };
+  
+    setTasks((prevTasks) => [...prevTasks, newTask]);
+    saveTasks([...tasks, newTask]);
   }
 
+  //task2
   function deleteTask(index) {
-    var clonedTasks = tasks;
-
-    clonedTasks.splice(index, 1);
-
-    setTasks(clonedTasks);
-    saveTasks(clonedTasks);
+    setTasks((prevTasks) => {
+      const updatedTasks = prevTasks.filter((_, i) => i !== index); 
+      saveTasks(updatedTasks);
+      return updatedTasks;
+    });
   }
 
   function loadTasks() {
