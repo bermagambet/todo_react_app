@@ -120,6 +120,7 @@ export default function App() {
     setTasks(sortedTasks);  
   };  
 
+
   const filterTasks = (state) => {  
     const filteredTasks = [...tasks].filter(task => task.state.toString() === state.toString());  
     setTasks(filteredTasks);  
