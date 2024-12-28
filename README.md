@@ -1,7 +1,7 @@
 React. Final
 
-Student ID: _fill in_
-Student Fullname: _fill in_
+Student ID: 22B031171
+Student Fullname: Daniar Elaman
 
 You have 4 tasks to accomplish. After completing them publish your code to GitHub to your repository.
 
@@ -25,3 +25,4 @@ After publishing to GitHub, answer live-coding question with repository URL.
    3.5 Now, add the "Deadline" field, which will be a Date input. For instance, this Task is due to 25th of Decembet. Also, add related sorting buttons: "Sort by deadline"
 
 4. To the left of "Delete" button (Trash bin icon) add "Edit" button. "Edit" should open "Edit task" modal window where user can edit all the fields of the Task. = 1 points.
+
