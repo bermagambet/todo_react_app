@@ -218,7 +218,7 @@ export default function App() {
             </Group>
 
             <Group mt="md">
-              <Button onClick={() => sortTasks("Done")}>Show Done first</Button>
+              <Button onClick={() => sortTasks("Done ")}>Show Done first</Button>
               <Button onClick={() => sortTasks("Doing right now")}>
                 Show Doing first
               </Button>
